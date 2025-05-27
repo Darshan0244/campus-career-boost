@@ -1,5 +1,6 @@
-import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen } from 'lucide-react';
+import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen, FileText } from 'lucide-react';
 import TopicCard from './TopicCard';
+import ResumeTemplate from './ResumeTemplate';
 
 const MainContent = () => {
   const topics = [
@@ -127,6 +128,44 @@ const MainContent = () => {
     }
   ];
 
+  const resumeTemplates = [
+    {
+      title: 'Modern Professional',
+      description: 'Clean and modern design perfect for tech roles and fresh graduates.',
+      imageUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop',
+      previewUrl: 'https://example.com/resume1-preview',
+      downloadUrl: 'https://example.com/resume1-download'
+    },
+    {
+      title: 'Creative Designer',
+      description: 'Eye-catching template ideal for creative and design positions.',
+      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop',
+      previewUrl: 'https://example.com/resume2-preview',
+      downloadUrl: 'https://example.com/resume2-download'
+    },
+    {
+      title: 'Executive Style',
+      description: 'Professional template suitable for senior roles and management positions.',
+      imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop',
+      previewUrl: 'https://example.com/resume3-preview',
+      downloadUrl: 'https://example.com/resume3-download'
+    },
+    {
+      title: 'Minimalist Clean',
+      description: 'Simple and elegant design that focuses on content and readability.',
+      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+      previewUrl: 'https://example.com/resume4-preview',
+      downloadUrl: 'https://example.com/resume4-download'
+    },
+    {
+      title: 'Technical Engineer',
+      description: 'Structured template optimized for engineering and technical roles.',
+      imageUrl: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop',
+      previewUrl: 'https://example.com/resume5-preview',
+      downloadUrl: 'https://example.com/resume5-download'
+    }
+  ];
+
   return (
     <main className="py-20">
       {/* Resources Section */}
@@ -146,6 +185,29 @@ const MainContent = () => {
               <div key={topic.id} id={topic.id}>
                 <TopicCard {...topic} />
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Templates Section */}
+      <section id="resume-templates" className="mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <FileText className="w-12 h-12 text-neon-blue mr-4" />
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">
+                Resume Templates
+              </h2>
+            </div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional resume templates to help you stand out in your job applications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {resumeTemplates.map((template, index) => (
+              <ResumeTemplate key={index} {...template} />
             ))}
           </div>
         </div>

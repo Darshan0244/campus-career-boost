@@ -1,12 +1,14 @@
 
-import { Github, Linkedin, Twitter, Mail, Heart, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, ExternalLink, Globe } from 'lucide-react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:contact@placementprep.com', label: 'Email' },
+    { icon: Github, href: 'https://github.com/Darshan0244', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/d-darshan-36077327a/', label: 'LinkedIn' },
+    { icon: Globe, href: 'https://ddarshanportfolio.vercel.app/', label: 'Portfolio' },
+    { icon: Mail, href: 'mailto:darshand4893@gmail.com', label: 'Email' },
   ];
 
   const quickLinks = [
@@ -43,6 +45,8 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 glass-light rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300 group"
                   aria-label={social.label}
                 >
@@ -96,7 +100,7 @@ const Footer = () => {
                 Have questions? Reach out to us and we'll help you succeed.
               </p>
               <a
-                href="mailto:contact@placementprep.com"
+                href="mailto:darshand4893@gmail.com"
                 className="inline-flex items-center px-4 py-2 glass-light rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/20 transition-all duration-300"
               >
                 <Mail className="w-4 h-4 mr-2" />
@@ -113,7 +117,7 @@ const Footer = () => {
               Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> for students
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              © 2024 PlacementPrep. All rights reserved.
+              © {currentYear} PlacementPrep. All rights reserved.
             </p>
           </div>
         </div>
