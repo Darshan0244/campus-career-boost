@@ -1,4 +1,3 @@
-
 import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen } from 'lucide-react';
 import TopicCard from './TopicCard';
 
@@ -16,12 +15,12 @@ const MainContent = () => {
         'Speed Time Distance', 'Profit and Loss', 'Probability', 'Statistics'
       ],
       resources: [
-        { name: 'India BIX Aptitude Practice', url: 'https://www.indiabix.com/aptitude/questions-and-answers/', type: 'practice' },
-        { name: 'OnlineStudy4u Channel', url: 'https://www.youtube.com/@OnlineStudy4u', type: 'video' },
-        { name: 'Smartstudyforcareer', url: 'https://www.youtube.com/@Smartstudyforcareer', type: 'video' },
-        { name: 'Career Ride Official', url: 'https://www.youtube.com/@CareerRideOfficial', type: 'video' },
-        { name: 'Chandan Logics', url: 'https://www.youtube.com/@ChandanLogics', type: 'video' },
-        { name: 'Past Year Papers', url: 'https://drive.google.com/drive/folders/1gFPwRS4JHpDSiOJd0Syyhh0AErn5XRfq', type: 'article' }
+        { name: 'India BIX Aptitude Practice', url: 'https://www.indiabix.com/aptitude/questions-and-answers/', type: 'practice' as const },
+        { name: 'OnlineStudy4u Channel', url: 'https://www.youtube.com/@OnlineStudy4u', type: 'video' as const },
+        { name: 'Smartstudyforcareer', url: 'https://www.youtube.com/@Smartstudyforcareer', type: 'video' as const },
+        { name: 'Career Ride Official', url: 'https://www.youtube.com/@CareerRideOfficial', type: 'video' as const },
+        { name: 'Chandan Logics', url: 'https://www.youtube.com/@ChandanLogics', type: 'video' as const },
+        { name: 'Past Year Papers', url: 'https://drive.google.com/drive/folders/1gFPwRS4JHpDSiOJd0Syyhh0AErn5XRfq', type: 'article' as const }
       ],
       color: 'purple',
       icon: <Calculator className="w-6 h-6 text-neon-purple" />
@@ -37,12 +36,12 @@ const MainContent = () => {
         'Routing Protocols', 'Inheritance', 'Polymorphism', 'Encapsulation', 'Abstraction'
       ],
       resources: [
-        { name: 'CodeHelp OOPS Playlist', url: 'https://youtu.be/i_5pvt7ag7E?si=bJJ3WSgRjqf8wcn2', type: 'video' },
-        { name: 'OOPS Notes by Love Babbar', url: 'https://drive.google.com/file/d/1_j7guQZdReJ9GzMdFhqRscXq9rnquBya/view?usp=drive_link', type: 'article' },
-        { name: 'DBMS Interview Questions', url: 'https://www.interviewbit.com/dbms-interview-questions/', type: 'practice' },
-        { name: 'DBMS Notes', url: 'https://drive.google.com/file/d/1vmLWJSJStfXRdAwtMFz1Kpj2Nnj7b9hY/view?usp=drive_link', type: 'article' },
-        { name: 'CodeHelp DBMS Playlist', url: 'https://youtube.com/playlist?list=PLDzeHZWIZsTpukecmA2p5rhHM14bl2dHU&si=nEIYPz5ph5DetCee', type: 'video' },
-        { name: 'OOPS MCQ Questions', url: 'https://www.interviewbit.com/oops-mcq/', type: 'practice' }
+        { name: 'CodeHelp OOPS Playlist', url: 'https://youtu.be/i_5pvt7ag7E?si=bJJ3WSgRjqf8wcn2', type: 'video' as const },
+        { name: 'OOPS Notes by Love Babbar', url: 'https://drive.google.com/file/d/1_j7guQZdReJ9GzMdFhqRscXq9rnquBya/view?usp=drive_link', type: 'article' as const },
+        { name: 'DBMS Interview Questions', url: 'https://www.interviewbit.com/dbms-interview-questions/', type: 'practice' as const },
+        { name: 'DBMS Notes', url: 'https://drive.google.com/file/d/1vmLWJSJStfXRdAwtMFz1Kpj2Nnj7b9hY/view?usp=drive_link', type: 'article' as const },
+        { name: 'CodeHelp DBMS Playlist', url: 'https://youtube.com/playlist?list=PLDzeHZWIZsTpukecmA2p5rhHM14bl2dHU&si=nEIYPz5ph5DetCee', type: 'video' as const },
+        { name: 'OOPS MCQ Questions', url: 'https://www.interviewbit.com/oops-mcq/', type: 'practice' as const }
       ],
       color: 'blue',
       icon: <Database className="w-6 h-6 text-neon-blue" />
@@ -58,12 +57,12 @@ const MainContent = () => {
         'Union Find', 'Segment Trees', 'Trie', 'Heap', 'Binary Trees', 'BST'
       ],
       resources: [
-        { name: 'Striver A2Z Course', url: 'https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/', type: 'practice' },
-        { name: 'CodeHelp DSA Course', url: 'https://www.youtube.com/@CodeHelp', type: 'video' },
-        { name: 'Apna College DSA', url: 'https://www.youtube.com/@ApnaCollegeOfficial', type: 'video' },
-        { name: 'Abdul Bari Algorithms', url: 'https://www.youtube.com/@abdul_bari', type: 'video' },
-        { name: 'Aditya Verma DP', url: 'https://www.youtube.com/@AdityaVermaTheProgrammingLord', type: 'video' },
-        { name: 'Pepcoding Java DSA', url: 'https://www.pepcoding.com/', type: 'practice' }
+        { name: 'Striver A2Z Course', url: 'https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/', type: 'practice' as const },
+        { name: 'CodeHelp DSA Course', url: 'https://www.youtube.com/@CodeHelp', type: 'video' as const },
+        { name: 'Apna College DSA', url: 'https://www.youtube.com/@ApnaCollegeOfficial', type: 'video' as const },
+        { name: 'Abdul Bari Algorithms', url: 'https://www.youtube.com/@abdul_bari', type: 'video' as const },
+        { name: 'Aditya Verma DP', url: 'https://www.youtube.com/@AdityaVermaTheProgrammingLord', type: 'video' as const },
+        { name: 'Pepcoding Java DSA', url: 'https://www.pepcoding.com/', type: 'practice' as const }
       ],
       color: 'green',
       icon: <Code className="w-6 h-6 text-neon-green" />
@@ -79,12 +78,12 @@ const MainContent = () => {
         'NoSQL Databases', 'MongoDB', 'Database Security'
       ],
       resources: [
-        { name: 'Apna College SQL Lecture', url: 'https://www.youtube.com/watch?v=hlGoQC332VM&t=5477s', type: 'video' },
-        { name: 'Riti Kumari SQL Interviews', url: 'https://www.youtube.com/@RitiKumari/videos', type: 'video' },
-        { name: 'SQL Interview Questions', url: 'https://www.interviewbit.com/sql-interview-questions/', type: 'practice' },
-        { name: 'SQL MCQ Questions', url: 'https://www.interviewbit.com/sql-mcq/', type: 'practice' },
-        { name: 'GeeksforGeeks SQL', url: 'https://www.geeksforgeeks.org/sql-tutorial/', type: 'article' },
-        { name: 'W3Schools SQL', url: 'https://www.w3schools.com/sql/', type: 'article' }
+        { name: 'Apna College SQL Lecture', url: 'https://www.youtube.com/watch?v=hlGoQC332VM&t=5477s', type: 'video' as const },
+        { name: 'Riti Kumari SQL Interviews', url: 'https://www.youtube.com/@RitiKumari/videos', type: 'video' as const },
+        { name: 'SQL Interview Questions', url: 'https://www.interviewbit.com/sql-interview-questions/', type: 'practice' as const },
+        { name: 'SQL MCQ Questions', url: 'https://www.interviewbit.com/sql-mcq/', type: 'practice' as const },
+        { name: 'GeeksforGeeks SQL', url: 'https://www.geeksforgeeks.org/sql-tutorial/', type: 'article' as const },
+        { name: 'W3Schools SQL', url: 'https://www.w3schools.com/sql/', type: 'article' as const }
       ],
       color: 'orange',
       icon: <Database className="w-6 h-6 text-neon-orange" />
@@ -99,11 +98,11 @@ const MainContent = () => {
         'Version Control (Git)', 'Deployment', 'Testing', 'Performance Optimization'
       ],
       resources: [
-        { name: 'Colt Steele Web Bootcamp', url: 'https://www.udemy.com/course/the-web-developer-bootcamp/', type: 'video' },
-        { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/', type: 'article' },
-        { name: 'FreeCodeCamp', url: 'https://www.freecodecamp.org/', type: 'practice' },
-        { name: 'React Documentation', url: 'https://react.dev/', type: 'article' },
-        { name: 'Node.js Tutorial', url: 'https://nodejs.org/en/learn', type: 'article' }
+        { name: 'Colt Steele Web Bootcamp', url: 'https://www.udemy.com/course/the-web-developer-bootcamp/', type: 'video' as const },
+        { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/', type: 'article' as const },
+        { name: 'FreeCodeCamp', url: 'https://www.freecodecamp.org/', type: 'practice' as const },
+        { name: 'React Documentation', url: 'https://react.dev/', type: 'article' as const },
+        { name: 'Node.js Tutorial', url: 'https://nodejs.org/en/learn', type: 'article' as const }
       ],
       color: 'pink',
       icon: <Network className="w-6 h-6 text-neon-pink" />
@@ -118,10 +117,10 @@ const MainContent = () => {
         'Company Research', 'Salary Negotiation', 'Follow-up Strategies'
       ],
       resources: [
-        { name: 'InterviewBit Questions', url: 'https://www.interviewbit.com/', type: 'practice' },
-        { name: 'GeeksforGeeks Interview', url: 'https://www.geeksforgeeks.org/company-interview-corner/', type: 'article' },
-        { name: 'LeetCode Interview', url: 'https://leetcode.com/interview/', type: 'practice' },
-        { name: 'Pramp Mock Interviews', url: 'https://www.pramp.com/', type: 'practice' }
+        { name: 'InterviewBit Questions', url: 'https://www.interviewbit.com/', type: 'practice' as const },
+        { name: 'GeeksforGeeks Interview', url: 'https://www.geeksforgeeks.org/company-interview-corner/', type: 'article' as const },
+        { name: 'LeetCode Interview', url: 'https://leetcode.com/interview/', type: 'practice' as const },
+        { name: 'Pramp Mock Interviews', url: 'https://www.pramp.com/', type: 'practice' as const }
       ],
       color: 'blue',
       icon: <Users className="w-6 h-6 text-neon-blue" />
