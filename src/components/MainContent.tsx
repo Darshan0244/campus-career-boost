@@ -150,30 +150,6 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-
-      {/* Quick Stats */}
-      <section className="py-16 glass-light border-y border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-neon-blue mb-2">500+</div>
-              <div className="text-gray-400">Practice Questions</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-neon-green mb-2">50+</div>
-              <div className="text-gray-400">Video Lectures</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-neon-purple mb-2">100+</div>
-              <div className="text-gray-400">Companies</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-neon-orange mb-2">24/7</div>
-              <div className="text-gray-400">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };

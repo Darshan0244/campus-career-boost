@@ -1,6 +1,7 @@
 
 import { ExternalLink, Clock, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 interface TopicCardProps {
   title: string;
@@ -12,6 +13,8 @@ interface TopicCardProps {
 }
 
 const TopicCard = ({ title, description, topics, resources, color, icon }: TopicCardProps) => {
+  const [showAllResources, setShowAllResources] = useState(false);
+  
   const colorClasses = {
     purple: 'border-neon-purple/30 hover:border-neon-purple/60 hover:shadow-neon-purple/20',
     blue: 'border-neon-blue/30 hover:border-neon-blue/60 hover:shadow-neon-blue/20',
@@ -19,6 +22,8 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
     orange: 'border-neon-orange/30 hover:border-neon-orange/60 hover:shadow-neon-orange/20',
     pink: 'border-neon-pink/30 hover:border-neon-pink/60 hover:shadow-neon-pink/20',
   };
+
+  const displayedResources = showAllResources ? resources : resources.slice(0, 3);
 
   return (
     <div className={`glass rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${colorClasses[color as keyof typeof colorClasses]}`}>
@@ -58,7 +63,7 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
           <Clock className="w-5 h-5 mr-2" />
           Resources
         </h4>
-        {resources.slice(0, 3).map((resource, index) => (
+        {displayedResources.map((resource, index) => (
           <a
             key={index}
             href={resource.url}
@@ -74,8 +79,12 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
           </a>
         ))}
         {resources.length > 3 && (
-          <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10">
-            View All Resources ({resources.length})
+          <Button 
+            variant="outline" 
+            className="w-full border-white/20 text-white hover:bg-white/10"
+            onClick={() => setShowAllResources(!showAllResources)}
+          >
+            {showAllResources ? 'Show Less' : `View All Resources (${resources.length})`}
           </Button>
         )}
       </div>

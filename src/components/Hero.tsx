@@ -1,13 +1,20 @@
 
-import { ArrowRight, Star, TrendingUp, Users } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Users, Clock, BookOpen, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const stats = [
-    { icon: Users, value: '10K+', label: 'Students' },
-    { icon: Star, value: '4.9', label: 'Rating' },
-    { icon: TrendingUp, value: '95%', label: 'Success Rate' },
+    { icon: BookOpen, value: '30+', label: 'Resources' },
+    { icon: Clock, value: '4hrs/day', label: 'Min Reading Time' },
+    { icon: GraduationCap, value: '90%', label: 'Success Tutors' },
   ];
+
+  const scrollToResources = () => {
+    const resourcesSection = document.getElementById('resources');
+    if (resourcesSection) {
+      resourcesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -24,7 +31,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="gradient-text">Master Your</span>
               <br />
-              <span className="text-white neon-text">Placement Journey</span>
+              <span className="text-white">Placement Journey</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Everything you need for placements & internships - Aptitude, CS Fundamentals, 
@@ -36,6 +43,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-purple/80 hover:to-neon-blue/80 text-white px-8 py-3 text-lg group"
+              onClick={scrollToResources}
             >
               Start Learning
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -44,6 +52,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg"
+              onClick={scrollToResources}
             >
               View Resources
             </Button>
