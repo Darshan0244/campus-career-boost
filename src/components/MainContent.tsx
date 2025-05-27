@@ -1,3 +1,4 @@
+
 import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen, FileText, Mail } from 'lucide-react';
 import TopicCard from './TopicCard';
 import ResumeTemplate from './ResumeTemplate';
@@ -177,7 +178,7 @@ const MainContent = () => {
   return (
     <main className="py-20">
       {/* Resources Section */}
-      <section id="resources" className="mb-20">
+      <section id="resources" className="mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -199,7 +200,7 @@ const MainContent = () => {
       </section>
 
       {/* Resume Templates Section */}
-      <section id="resume-templates" className="mb-20">
+      <section id="resume-templates" className="mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
@@ -225,7 +226,7 @@ const MainContent = () => {
       <StatisticsSection />
 
       {/* Contact Note Section */}
-      <section className="mb-20">
+      <section className="mb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass rounded-2xl p-8 text-center border-white/10">
             <div className="flex items-center justify-center mb-6">
