@@ -1,13 +1,73 @@
 
 import { ArrowRight, Star, TrendingUp, Users, Clock, BookOpen, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useEffect, useState, useRef } from 'react';
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [counts, setCounts] = useState({
+    resources: 0,
+    readingTime: 0,
+    successRate: 0
+  });
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   const stats = [
-    { icon: BookOpen, value: '30+', label: 'Resources' },
-    { icon: Clock, value: '4hrs/day', label: 'Min Reading Time' },
-    { icon: GraduationCap, value: '90%', label: 'Success Tutors' },
+    { icon: BookOpen, value: counts.resources, suffix: '+', label: 'Resources' },
+    { icon: Clock, value: counts.readingTime, suffix: 'hrs/day', label: 'Min Reading Time' },
+    { icon: GraduationCap, value: counts.successRate, suffix: '%', label: 'Success Tutors' },
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          startCountAnimation();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [isVisible]);
+
+  const startCountAnimation = () => {
+    const targetCounts = {
+      resources: 30,
+      readingTime: 4,
+      successRate: 90
+    };
+
+    const duration = 2000;
+    const steps = 50;
+    const stepTime = duration / steps;
+
+    let currentStep = 0;
+    const timer = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+
+      setCounts({
+        resources: Math.floor(targetCounts.resources * progress),
+        readingTime: Math.floor(targetCounts.readingTime * progress),
+        successRate: Math.floor(targetCounts.successRate * progress)
+      });
+
+      if (currentStep >= steps) {
+        clearInterval(timer);
+        setCounts(targetCounts);
+      }
+    }, stepTime);
+  };
 
   const scrollToResources = () => {
     const resourcesSection = document.getElementById('resources');
@@ -17,7 +77,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section ref={sectionRef} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-16">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-neon-purple/20 rounded-full blur-3xl animate-float" />
@@ -63,7 +123,9 @@ const Hero = () => {
             {stats.map((stat, index) => (
               <div key={index} className="glass rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-neon-blue mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-3xl font-bold text-white mb-1">
+                  {stat.value}{stat.suffix}
+                </div>
                 <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}

@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, Code, BookOpen, Users, Award } from 'lucide-react';
+import { Menu, X, Code, BookOpen, Users, Award, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -11,6 +11,7 @@ const Navbar = () => {
     { icon: Code, label: 'DSA', href: '#dsa' },
     { icon: Users, label: 'CS Fundamentals', href: '#cs-fundamentals' },
     { icon: Award, label: 'Aptitude', href: '#aptitude' },
+    { icon: FileText, label: 'Resume', href: '#resume-templates' },
   ];
 
   return (

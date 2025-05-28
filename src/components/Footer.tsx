@@ -14,7 +14,7 @@ const Footer = () => {
   const features = [
     { icon: Code, title: '6 Core Topics', description: 'Comprehensive coverage' },
     { icon: Star, title: '20+ Resources', description: 'Curated materials' },
-    { icon: Users, title: 'Expert Guidance', description: 'Professional support' },
+    { icon: Users, title: 'Expert Resource', description: 'Quality content' },
   ];
 
   return (
@@ -90,8 +90,8 @@ const Footer = () => {
               </h3>
               
               <div className="space-y-6">
-                <p className="text-gray-300 leading-relaxed">
-                  Have questions, suggestions, or feedback? We're here to help you succeed in your placement journey.
+                <p className="text-gray-300 leading-relaxed italic">
+                  "Success is where preparation and opportunity meet luck."
                 </p>
                 
                 <div className="glass-light rounded-lg p-4 border border-white/10">
@@ -109,7 +109,7 @@ const Footer = () => {
 
                 <div className="bg-gradient-to-r from-neon-purple/10 to-neon-blue/10 rounded-lg p-4 border border-white/10">
                   <p className="text-sm text-gray-300">
-                    <span className="text-neon-blue font-medium">Quick Response:</span> We typically respond within 24 hours
+                    <span className="text-neon-blue font-medium">Response Time:</span> Queries will be responded within 1-2 days
                   </p>
                 </div>
               </div>
@@ -122,10 +122,6 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <p className="text-gray-400 text-sm flex items-center">
                   Made with <Heart className="w-4 h-4 mx-2 text-red-500 animate-pulse" /> for students
-                </p>
-                <div className="hidden md:block w-1 h-1 bg-gray-600 rounded-full"></div>
-                <p className="text-gray-400 text-sm">
-                  Empowering futures, one placement at a time
                 </p>
               </div>
               
