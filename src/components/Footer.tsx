@@ -112,7 +112,7 @@ const Footer = () => {
               <div className="space-y-6">
                 <div className="glass-light rounded-lg p-6 border border-white/10">
                   <blockquote className="text-gray-300 italic text-lg leading-relaxed mb-4">
-                    "Success is where preparation and opportunity meet luck."
+                    "Success is where preparation and opportunity meets luck."
                   </blockquote>
                   <cite className="text-neon-blue font-medium">- Bobby Unser</cite>
                 </div>
