@@ -1,5 +1,6 @@
 
 import { Github, Linkedin, Mail, Heart, Globe, Code, Star, Users } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ const Footer = () => {
 
   const features = [
     { icon: Code, title: '6 Core Topics', description: 'Comprehensive coverage' },
-    { icon: Star, title: '20+ Resources', description: 'Curated materials' },
+    { icon: Star, title: '30+ Resources', description: 'Curated materials' },
     { icon: Users, title: 'Expert Resource', description: 'Quality content' },
   ];
 
@@ -21,6 +22,13 @@ const Footer = () => {
     <footer className="relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
+      
+      {/* Contact Form Section */}
+      <div className="relative py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ContactForm />
+        </div>
+      </div>
       
       {/* Glass effect */}
       <div className="relative glass border-t border-white/10">
@@ -82,29 +90,19 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Contact Section */}
+            {/* Quote Section */}
             <div className="lg:col-span-1">
               <h3 className="text-xl font-bold text-white mb-8 flex items-center">
-                <Mail className="w-6 h-6 text-neon-purple mr-2" />
-                Get In Touch
+                <Heart className="w-6 h-6 text-neon-purple mr-2" />
+                Inspiration
               </h3>
               
               <div className="space-y-6">
-                <p className="text-gray-300 leading-relaxed italic">
-                  "Success is where preparation and opportunity meet luck."
-                </p>
-                
-                <div className="glass-light rounded-lg p-4 border border-white/10">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <Mail className="w-5 h-5 text-neon-blue" />
-                    <span className="text-white font-medium">Email Support</span>
-                  </div>
-                  <a
-                    href="mailto:darshand4893@gmail.com"
-                    className="text-gray-300 hover:text-neon-blue transition-colors duration-300 text-sm"
-                  >
-                    darshand4893@gmail.com
-                  </a>
+                <div className="glass-light rounded-lg p-6 border border-white/10">
+                  <blockquote className="text-gray-300 italic text-lg leading-relaxed mb-4">
+                    "Success is where preparation and opportunity meet luck."
+                  </blockquote>
+                  <cite className="text-neon-blue font-medium">- Bobby Unser</cite>
                 </div>
 
                 <div className="bg-gradient-to-r from-neon-purple/10 to-neon-blue/10 rounded-lg p-4 border border-white/10">
