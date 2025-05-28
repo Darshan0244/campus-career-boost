@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Darshan0244', label: 'GitHub', color: 'hover:text-white' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/d-darshan-36077327a/', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: Globe, href: 'https://ddarshanportfolio.vercel.app/', label: 'Portfolio', color: 'hover:text-green-400' },
-    { icon: Mail, href: 'mailto:darshand4893@gmail.com', label: 'Email', color: 'hover:text-purple-400' },
+    { icon: Github, href: 'https://github.com/Darshan0244', label: 'GitHub', color: 'hover:text-white', bgGradient: 'from-gray-800 to-black' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/d-darshan-36077327a/', label: 'LinkedIn', color: 'hover:text-blue-400', bgGradient: 'from-blue-600 to-blue-800' },
+    { icon: Globe, href: 'https://ddarshanportfolio.vercel.app/', label: 'Portfolio', color: 'hover:text-green-400', bgGradient: 'from-green-500 to-emerald-600' },
+    { icon: Mail, href: 'mailto:darshand4893@gmail.com', label: 'Email', color: 'hover:text-purple-400', bgGradient: 'from-purple-500 to-purple-700' },
   ];
 
   const features = [
@@ -49,7 +49,7 @@ const Footer = () => {
                 Your comprehensive platform for placement and internship preparation. Master every aspect from aptitude to technical skills with our curated resources and expert guidance.
               </p>
 
-              {/* Social Links */}
+              {/* Enhanced Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
@@ -57,11 +57,23 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group relative w-12 h-12 glass-light rounded-xl flex items-center justify-center transition-all duration-300 ${social.color}`}
+                    className="group relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 transform hover:scale-110 hover:-translate-y-1"
                     aria-label={social.label}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <social.icon className="relative w-5 h-5 text-gray-400 group-hover:scale-110 transition-all duration-300" />
+                    {/* Background with gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20 group-hover:border-white/40 transition-all duration-500"></div>
+                    
+                    {/* Hover gradient background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${social.bgGradient} rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+                    
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+                    
+                    {/* Icon */}
+                    <social.icon className="relative w-5 h-5 text-gray-400 group-hover:text-white transition-all duration-500 group-hover:drop-shadow-lg z-10" />
+                    
+                    {/* Ripple effect */}
+                    <div className="absolute inset-0 rounded-xl bg-white/20 scale-0 group-hover:scale-110 opacity-0 group-hover:opacity-30 transition-all duration-300"></div>
                   </a>
                 ))}
               </div>

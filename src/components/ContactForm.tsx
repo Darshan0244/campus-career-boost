@@ -148,7 +148,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-purple/80 hover:to-neon-blue/80 text-white font-medium py-3 transition-all duration-300 hover:scale-105"
+              className={`w-full bg-gradient-to-r from-neon-purple to-neon-blue text-white font-medium py-3 transition-all duration-300 ${!isSubmitting ? 'hover:from-neon-purple/80 hover:to-neon-blue/80 hover:scale-105' : ''}`}
             >
               {isSubmitting ? (
                 <div className="flex items-center gap-2">
