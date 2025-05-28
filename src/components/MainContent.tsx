@@ -226,7 +226,7 @@ const MainContent = () => {
       <StatisticsSection />
 
       {/* Contact Note Section */}
-      <section className="mb-12">
+      <section className="mb-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass rounded-2xl p-8 text-center border-white/10">
             <div className="flex items-center justify-center mb-6">

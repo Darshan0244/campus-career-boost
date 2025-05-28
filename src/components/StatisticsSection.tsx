@@ -7,7 +7,8 @@ const StatisticsSection = () => {
   const [counts, setCounts] = useState({
     aptitude: 0,
     csBasics: 0,
-    dsaAndSql: 0
+    dsa: 0,
+    sql: 0
   });
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -37,7 +38,8 @@ const StatisticsSection = () => {
     const targetCounts = {
       aptitude: 5,
       csBasics: 5,
-      dsaAndSql: 5
+      dsa: 5,
+      sql: 5
     };
 
     const duration = 2000; // 2 seconds
@@ -52,7 +54,8 @@ const StatisticsSection = () => {
       setCounts({
         aptitude: Math.floor(targetCounts.aptitude * progress),
         csBasics: Math.floor(targetCounts.csBasics * progress),
-        dsaAndSql: Math.floor(targetCounts.dsaAndSql * progress)
+        dsa: Math.floor(targetCounts.dsa * progress),
+        sql: Math.floor(targetCounts.sql * progress)
       });
 
       if (currentStep >= steps) {
@@ -68,7 +71,7 @@ const StatisticsSection = () => {
       count: counts.aptitude,
       suffix: '+',
       description: 'Comprehensive aptitude materials',
-      icon: <Calculator className="w-6 h-6" />,
+      icon: <Calculator className="w-5 h-5" />,
       color: 'from-purple-500 to-purple-700',
       bgGradient: 'from-purple-500/20 to-purple-700/20'
     },
@@ -77,18 +80,27 @@ const StatisticsSection = () => {
       count: counts.csBasics,
       suffix: '+',
       description: 'Core computer science concepts',
-      icon: <Database className="w-6 h-6" />,
+      icon: <Database className="w-5 h-5" />,
       color: 'from-blue-500 to-blue-700',
       bgGradient: 'from-blue-500/20 to-blue-700/20'
     },
     {
-      title: 'DSA & SQL Resources',
-      count: counts.dsaAndSql,
+      title: 'DSA Resources',
+      count: counts.dsa,
       suffix: '+',
-      description: 'Data structures and database queries',
-      icon: <Code className="w-6 h-6" />,
+      description: 'Data structures and algorithms',
+      icon: <Code className="w-5 h-5" />,
       color: 'from-green-500 to-green-700',
       bgGradient: 'from-green-500/20 to-green-700/20'
+    },
+    {
+      title: 'SQL Resources',
+      count: counts.sql,
+      suffix: '+',
+      description: 'Database and SQL queries',
+      icon: <Database className="w-5 h-5" />,
+      color: 'from-orange-500 to-orange-700',
+      bgGradient: 'from-orange-500/20 to-orange-700/20'
     }
   ];
 
@@ -107,34 +119,34 @@ const StatisticsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {statistics.map((stat, index) => (
             <div
               key={index}
-              className={`glass rounded-xl p-6 text-center transition-all duration-500 hover:scale-105 border-white/10 bg-gradient-to-br ${stat.bgGradient}`}
+              className={`glass rounded-xl p-4 text-center transition-all duration-500 hover:scale-105 border-white/10 bg-gradient-to-br ${stat.bgGradient}`}
               style={{
                 animationDelay: `${index * 200}ms`
               }}
             >
-              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r ${stat.color} mb-4 text-white`}>
+              <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r ${stat.color} mb-3 text-white`}>
                 {stat.icon}
               </div>
               
-              <div className="mb-3">
+              <div className="mb-2">
                 <div className="flex items-center justify-center space-x-1">
-                  <span className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                  <span className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                     {stat.count}
                   </span>
-                  <span className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                  <span className={`text-xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                     {stat.suffix}
                   </span>
                 </div>
               </div>
               
-              <h3 className="text-lg font-bold text-white mb-2">
+              <h3 className="text-sm font-bold text-white mb-1">
                 {stat.title}
               </h3>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-xs">
                 {stat.description}
               </p>
             </div>
