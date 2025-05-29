@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, Heart, Globe, Code, Star, Users } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Globe, Code, Star, Users, Quote } from 'lucide-react';
 import ContactForm from './ContactForm';
 
 const Footer = () => {
@@ -109,8 +109,22 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom Section */}
+          {/* Inspirational Quote Section */}
           <div className="border-t border-white/10 mt-16 pt-8">
+            <div className="flex flex-col items-center space-y-6 mb-8">
+              <div className="flex items-center justify-center space-x-3">
+                <Quote className="w-6 h-6 text-neon-purple" />
+                <blockquote className="text-lg text-gray-300 font-medium italic text-center">
+                  "Programming isn't about what you know; it's about what you can figure out."
+                </blockquote>
+                <Quote className="w-6 h-6 text-neon-purple transform rotate-180" />
+              </div>
+              <p className="text-gray-400 text-sm">— Chris Pine</p>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2">
                 <p className="text-gray-400 text-sm flex items-center">
