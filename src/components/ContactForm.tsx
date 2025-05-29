@@ -163,12 +163,6 @@ const ContactForm = () => {
               )}
             </Button>
           </form>
-          
-          <div className="mt-6 p-4 glass-light rounded-lg border border-white/10">
-            <p className="text-sm text-gray-300 text-center">
-              <span className="text-neon-blue font-medium">Quick Response:</span> Queries will be responded within 1-2 days
-            </p>
-          </div>
         </CardContent>
       </Card>
     </div>
