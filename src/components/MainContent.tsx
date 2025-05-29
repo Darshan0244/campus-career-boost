@@ -1,4 +1,3 @@
-
 import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen, FileText, Mail } from 'lucide-react';
 import TopicCard from './TopicCard';
 import ResumeTemplate from './ResumeTemplate';
@@ -224,41 +223,6 @@ const MainContent = () => {
 
       {/* Statistics Section */}
       <StatisticsSection />
-
-      {/* Contact Note Section */}
-      <section className="mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass rounded-2xl p-8 text-center border-white/10">
-            <div className="flex items-center justify-center mb-6">
-              <Mail className="w-12 h-12 text-neon-blue mr-4" />
-              <h3 className="text-3xl font-bold gradient-text">
-                Stay Updated
-              </h3>
-            </div>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Want to suggest improvements, provide feedback, or stay informed about future updates? 
-              We'd love to hear from you! Your input helps us make PlacementPrep better for everyone.
-            </p>
-            <div className="space-y-4">
-              <p className="text-gray-400">
-                Contact us for:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-                <div>• Feature requests</div>
-                <div>• Content improvements</div>
-                <div>• Bug reports</div>
-              </div>
-              <a
-                href="mailto:darshand4893@gmail.com"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-purple/80 hover:to-neon-blue/80 text-white rounded-lg font-medium transition-all duration-300 mt-6"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Get in Touch
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };
