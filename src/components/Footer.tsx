@@ -33,7 +33,7 @@ const Footer = () => {
       {/* Glass effect */}
       <div className="relative glass border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Brand Section */}
             <div className="lg:col-span-1">
@@ -100,28 +100,11 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
-            </div>
 
-            {/* Quote Section */}
-            <div className="lg:col-span-1">
-              <h3 className="text-xl font-bold text-white mb-8 flex items-center">
-                <Heart className="w-6 h-6 text-neon-purple mr-2" />
-                Inspiration
-              </h3>
-              
-              <div className="space-y-6">
-                <div className="glass-light rounded-lg p-6 border border-white/10">
-                  <blockquote className="text-gray-300 italic text-lg leading-relaxed mb-4">
-                    "Success is where preparation and opportunity meets luck."
-                  </blockquote>
-                  <cite className="text-neon-blue font-medium">- Bobby Unser</cite>
-                </div>
-
-                <div className="bg-gradient-to-r from-neon-purple/10 to-neon-blue/10 rounded-lg p-4 border border-white/10">
-                  <p className="text-sm text-gray-300">
-                    <span className="text-neon-blue font-medium">Response Time:</span> Queries will be responded within 1-2 days
-                  </p>
-                </div>
+              <div className="mt-8 bg-gradient-to-r from-neon-purple/10 to-neon-blue/10 rounded-lg p-4 border border-white/10">
+                <p className="text-sm text-gray-300">
+                  <span className="text-neon-blue font-medium">Response Time:</span> Queries will be responded within 1-2 days
+                </p>
               </div>
             </div>
           </div>
