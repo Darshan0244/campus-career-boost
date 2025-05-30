@@ -134,16 +134,16 @@ const MainContent = () => {
     {
       title: 'Classic Professional Resume – Sans Serif Design',
       description: 'Clean and professional design perfect for all career levels and industries.',
-      imageUrl: '/lovable-uploads/b5613b8c-c0e0-41dc-8453-0a5c7b5024d1.png',
+      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop',
       previewUrl: 'https://flowcv.com/resume-template/classic-sans-serif-professional',
       downloadUrl: '/lovable-uploads/b5613b8c-c0e0-41dc-8453-0a5c7b5024d1.png'
     },
     {
-      title: 'Creative Designer',
-      description: 'Eye-catching template ideal for creative and design positions.',
-      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop',
-      previewUrl: 'https://example.com/resume2-preview',
-      downloadUrl: 'https://example.com/resume2-download'
+      title: 'Structured Academic Resume',
+      description: 'Suitable for those blending research and tech industry experience.',
+      imageUrl: '/lovable-uploads/cd078c3a-c8e8-459b-8c39-3a9c75378ac9.png',
+      previewUrl: 'https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs',
+      downloadUrl: '/lovable-uploads/cd078c3a-c8e8-459b-8c39-3a9c75378ac9.png'
     },
     {
       title: 'Executive Style',
