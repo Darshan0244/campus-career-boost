@@ -146,18 +146,18 @@ const MainContent = () => {
       downloadUrl: '/lovable-uploads/cd078c3a-c8e8-459b-8c39-3a9c75378ac9.png'
     },
     {
-      title: 'Executive Style',
-      description: 'Professional template suitable for senior roles and management positions.',
-      imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop',
-      previewUrl: 'https://example.com/resume3-preview',
-      downloadUrl: 'https://example.com/resume3-download'
+      title: 'Deedy Resume Reversed - 2 Column',
+      description: 'Professional 2-column template with modern layout and clear sections.',
+      imageUrl: '/lovable-uploads/695f9ebd-f408-43cc-90ef-6553480a6464.png',
+      previewUrl: 'https://www.overleaf.com/latex/templates/deedy-resume-reversed/hqnwfgjbbddt',
+      downloadUrl: '/lovable-uploads/695f9ebd-f408-43cc-90ef-6553480a6464.png'
     },
     {
-      title: 'Minimalist Clean',
-      description: 'Simple and elegant design that focuses on content and readability.',
-      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
-      previewUrl: 'https://example.com/resume4-preview',
-      downloadUrl: 'https://example.com/resume4-download'
+      title: 'FAANGPath Simple Template',
+      description: 'Clean and structured template optimized for tech industry applications.',
+      imageUrl: '/lovable-uploads/637c8f0f-9014-45a8-b9c1-83f51c830fcf.png',
+      previewUrl: 'https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc',
+      downloadUrl: '/lovable-uploads/637c8f0f-9014-45a8-b9c1-83f51c830fcf.png'
     },
     {
       title: 'Technical Engineer',
