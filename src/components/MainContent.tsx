@@ -1,3 +1,4 @@
+
 import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen, FileText, Mail } from 'lucide-react';
 import TopicCard from './TopicCard';
 import ResumeTemplate from './ResumeTemplate';
@@ -131,11 +132,11 @@ const MainContent = () => {
 
   const resumeTemplates = [
     {
-      title: 'Modern Professional',
-      description: 'Clean and modern design perfect for tech roles and fresh graduates.',
-      imageUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop',
-      previewUrl: 'https://example.com/resume1-preview',
-      downloadUrl: 'https://example.com/resume1-download'
+      title: 'Classic Professional Resume – Sans Serif Design',
+      description: 'Clean and professional design perfect for all career levels and industries.',
+      imageUrl: '/lovable-uploads/b5613b8c-c0e0-41dc-8453-0a5c7b5024d1.png',
+      previewUrl: 'https://flowcv.com/resume-template/classic-sans-serif-professional',
+      downloadUrl: '/lovable-uploads/b5613b8c-c0e0-41dc-8453-0a5c7b5024d1.png'
     },
     {
       title: 'Creative Designer',
