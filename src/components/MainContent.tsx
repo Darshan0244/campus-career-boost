@@ -134,44 +134,44 @@ const MainContent = () => {
     {
       title: 'Classic Professional Resume – Sans Serif Design',
       description: 'Clean and professional design perfect for all career levels and industries.',
-      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=400&h=300&fit=crop',
       previewUrl: 'https://flowcv.com/resume-template/classic-sans-serif-professional',
       downloadUrl: '/lovable-uploads/b5613b8c-c0e0-41dc-8453-0a5c7b5024d1.png'
     },
     {
       title: 'Structured Academic Resume',
       description: 'Suitable for those blending research and tech industry experience.',
-      imageUrl: '/lovable-uploads/cd078c3a-c8e8-459b-8c39-3a9c75378ac9.png',
+      imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop',
       previewUrl: 'https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs',
       downloadUrl: '/lovable-uploads/cd078c3a-c8e8-459b-8c39-3a9c75378ac9.png'
     },
     {
       title: 'Deedy Resume Reversed - 2 Column',
       description: 'Professional 2-column template with modern layout and clear sections.',
-      imageUrl: '/lovable-uploads/695f9ebd-f408-43cc-90ef-6553480a6464.png',
+      imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop',
       previewUrl: 'https://www.overleaf.com/latex/templates/deedy-resume-reversed/hqnwfgjbbddt',
       downloadUrl: '/lovable-uploads/695f9ebd-f408-43cc-90ef-6553480a6464.png'
     },
     {
       title: 'FAANGPath Simple Template',
       description: 'Clean and structured template optimized for tech industry applications.',
-      imageUrl: '/lovable-uploads/637c8f0f-9014-45a8-b9c1-83f51c830fcf.png',
+      imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
       previewUrl: 'https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc',
       downloadUrl: '/lovable-uploads/637c8f0f-9014-45a8-b9c1-83f51c830fcf.png'
     },
     {
-      title: 'Technical Engineer',
-      description: 'Structured template optimized for engineering and technical roles.',
-      imageUrl: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop',
-      previewUrl: 'https://example.com/resume5-preview',
-      downloadUrl: 'https://example.com/resume5-download'
+      title: 'Canva Resume Maker',
+      description: 'Interactive online resume builder with modern templates and easy customization.',
+      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+      previewUrl: 'https://www.canva.com/design/DAGo5WdESE4/RfTVPYxoDq_j7-LcsqC5LA/edit?ui=eyJHIjp7IkQiOnsiRCI6eyJBPyI6IkUifX19fQ&referrer=resumes-landing-page',
+      downloadUrl: 'https://www.canva.com/design/DAGo5WdESE4/RfTVPYxoDq_j7-LcsqC5LA/edit?ui=eyJHIjp7IkQiOnsiRCI6eyJBPyI6IkUifX19fQ&referrer=resumes-landing-page'
     },
     {
-      title: 'Graduate Special',
-      description: 'Perfect template for recent graduates and entry-level positions.',
+      title: 'Professional Experience Resume',
+      description: 'Perfect template for professionals with substantial experience and projects.',
       imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop',
-      previewUrl: 'https://example.com/resume6-preview',
-      downloadUrl: 'https://example.com/resume6-download'
+      previewUrl: 'https://www.overleaf.com/latex/templates/resume-template-by-anubhav/dhmkrwtksdgy',
+      downloadUrl: 'https://www.overleaf.com/latex/templates/resume-template-by-anubhav/dhmkrwtksdgy'
     }
   ];
 
