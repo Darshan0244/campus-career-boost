@@ -109,7 +109,7 @@ const Loader = () => {
         <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-neon-blue to-transparent animate-pulse opacity-30" 
              style={{ 
                top: '50%',
-               animation: 'slide-up 3s ease-in-out infinite'
+               animation: 'slide-up-loader 3s ease-in-out infinite'
              }}></div>
       </div>
     </div>
