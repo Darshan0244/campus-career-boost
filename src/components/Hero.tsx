@@ -111,9 +111,9 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
-                variant="outline" 
+                variant="ghost" 
                 size="lg" 
-                className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 text-base sm:text-lg"
+                className="w-full sm:w-auto bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 text-base sm:text-lg"
                 onClick={scrollToResources}
               >
                 View Resources
