@@ -88,7 +88,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="text-center">
           <div className="animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-6 px-4 mt-8 sm:mt-0">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-6 px-4 mt-12 sm:mt-0">
               <span className="gradient-text">Master Your</span>
               <br />
               <span className="text-white">Placement Journey</span>
@@ -100,7 +100,7 @@ const Hero = () => {
           </div>
 
           {/* Buttons container with proper mobile spacing */}
-          <div className="mb-12 sm:mb-12 px-4">
+          <div className="mb-16 sm:mb-12 px-4">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-up justify-center items-center">
               <Button 
                 size="lg" 
@@ -121,9 +121,9 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Stats container with improved mobile spacing */}
+          {/* Stats container with equal spacing for all cards */}
           <div className="px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 md:gap-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 md:gap-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.5s' }}>
               {stats.map((stat, index) => (
                 <div key={index} className="glass rounded-2xl p-6 sm:p-6 hover:scale-105 transition-transform duration-300">
                   <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-neon-blue mx-auto mb-3 sm:mb-3" />
