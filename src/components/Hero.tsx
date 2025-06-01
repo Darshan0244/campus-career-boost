@@ -88,7 +88,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="text-center">
           <div className="animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-6 px-4 mt-12 sm:mt-0">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-6 px-4 mt-16 sm:mt-8">
               <span className="gradient-text">Master Your</span>
               <br />
               <span className="text-white">Placement Journey</span>
@@ -111,9 +111,9 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
-                variant="ghost" 
+                variant="outline" 
                 size="lg" 
-                className="w-full sm:w-auto bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 text-base sm:text-lg"
+                className="w-full sm:w-auto bg-transparent border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 text-base sm:text-lg"
                 onClick={scrollToResources}
               >
                 View Resources
