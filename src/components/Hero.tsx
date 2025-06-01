@@ -113,7 +113,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="w-full sm:w-auto bg-transparent border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 text-base sm:text-lg"
+                className="w-full sm:w-auto bg-white/10 border-white/20 text-white hover:bg-white/20 px-6 sm:px-8 py-3 text-base sm:text-lg"
                 onClick={scrollToResources}
               >
                 View Resources

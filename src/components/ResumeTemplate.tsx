@@ -36,7 +36,7 @@ const ResumeTemplate = ({ title, description, imageUrl, previewUrl, downloadUrl 
         <Button 
           variant="outline" 
           size="sm" 
-          className="flex-1 bg-transparent border-white/20 text-white hover:bg-white/10"
+          className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20"
           onClick={() => window.open(downloadUrl, '_blank')}
         >
           <Download className="w-4 h-4 mr-2" />
