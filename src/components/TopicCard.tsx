@@ -42,7 +42,7 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
           Key Topics
         </h4>
         <div className="flex flex-wrap gap-2">
-          {topics.slice(0, 6).map((topic, index) => (
+          {topics.map((topic, index) => (
             <span
               key={index}
               className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 border border-white/20"
@@ -50,11 +50,6 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
               {topic}
             </span>
           ))}
-          {topics.length > 6 && (
-            <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-400 border border-white/20">
-              +{topics.length - 6} more
-            </span>
-          )}
         </div>
       </div>
       
