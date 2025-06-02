@@ -14,6 +14,15 @@ const Navbar = () => {
     { icon: FileText, label: 'Resume', href: '#resume-templates' },
   ];
 
+  const handleNavClick = (href: string) => {
+    const targetId = href.substring(1); // Remove the # from href
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setIsOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,14 +38,14 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+                  onClick={() => handleNavClick(item.href)}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 bg-transparent border-none cursor-pointer"
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.label}</span>
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -60,15 +69,14 @@ const Navbar = () => {
         <div className="md:hidden glass-light border-t border-white/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
+                onClick={() => handleNavClick(item.href)}
+                className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 w-full text-left bg-transparent border-none cursor-pointer"
               >
                 <item.icon className="w-5 h-5" />
                 <span>{item.label}</span>
-              </a>
+              </button>
             ))}
           </div>
         </div>
