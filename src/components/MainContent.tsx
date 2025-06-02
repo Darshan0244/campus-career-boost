@@ -189,7 +189,7 @@ const MainContent = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             {topics.map((topic) => (
               <div key={topic.id} id={topic.id}>
                 <TopicCard {...topic} />
