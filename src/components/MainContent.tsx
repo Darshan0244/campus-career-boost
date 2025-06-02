@@ -1,4 +1,3 @@
-
 import { Brain, Code, Database, Network, Calculator, Users, TrendingUp, BookOpen, FileText, Mail } from 'lucide-react';
 import TopicCard from './TopicCard';
 import ResumeTemplate from './ResumeTemplate';
@@ -34,7 +33,7 @@ const MainContent = () => {
       description: 'Core computer science concepts including OOPS, DBMS, OS, and Computer Networks.',
       topics: [
         'Object Oriented Programming', 'Database Management Systems', 'Operating Systems',
-        'Computer Networks', 'SQL Queries', 'Normalization', 'Indexing', 'Transactions',
+        'Computer Networks', 'SQL Queries', 'Indexing', 'Transactions',
         'Process Management', 'Memory Management', 'File Systems', 'TCP/IP', 'OSI Model',
         'Routing Protocols', 'Inheritance', 'Polymorphism', 'Encapsulation', 'Abstraction'
       ],
