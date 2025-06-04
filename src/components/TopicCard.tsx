@@ -24,8 +24,8 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
   };
 
   const displayedResources = showAllResources ? resources : resources.slice(0, 3);
-  // Show 4 topics on desktop (2 rows of ~2 topics each), 6 on mobile
-  const topicsLimit = window.innerWidth >= 768 ? 4 : 6;
+  // Show 4 topics on desktop (2 rows), 6 on mobile
+  const topicsLimit = 4;
   const displayedTopics = showAllTopics ? topics : topics.slice(0, topicsLimit);
 
   return (
