@@ -1,4 +1,3 @@
-
 import { ExternalLink, Clock, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -25,7 +24,9 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
   };
 
   const displayedResources = showAllResources ? resources : resources.slice(0, 3);
-  const displayedTopics = showAllTopics ? topics : topics.slice(0, 6);
+  // Show 4 topics on desktop (2 rows of ~2 topics each), 6 on mobile
+  const topicsLimit = window.innerWidth >= 768 ? 4 : 6;
+  const displayedTopics = showAllTopics ? topics : topics.slice(0, topicsLimit);
 
   return (
     <div className={`glass rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${colorClasses[color as keyof typeof colorClasses]}`}>
@@ -53,7 +54,7 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
             </span>
           ))}
         </div>
-        {topics.length > 6 && (
+        {topics.length > topicsLimit && (
           <Button 
             variant="outline" 
             className="w-full mt-3 border-white/20 text-white hover:bg-white/10"
