@@ -1,3 +1,4 @@
+
 import { ExternalLink, Clock, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -9,9 +10,10 @@ interface TopicCardProps {
   resources: { name: string; url: string; type: 'video' | 'article' | 'practice' }[];
   color: string;
   icon: React.ReactNode;
+  topicsLimit?: number;
 }
 
-const TopicCard = ({ title, description, topics, resources, color, icon }: TopicCardProps) => {
+const TopicCard = ({ title, description, topics, resources, color, icon, topicsLimit = 4 }: TopicCardProps) => {
   const [showAllResources, setShowAllResources] = useState(false);
   const [showAllTopics, setShowAllTopics] = useState(false);
   
@@ -24,8 +26,6 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
   };
 
   const displayedResources = showAllResources ? resources : resources.slice(0, 3);
-  // Show 4 topics on desktop (2 rows), 6 on mobile
-  const topicsLimit = 4;
   const displayedTopics = showAllTopics ? topics : topics.slice(0, topicsLimit);
 
   return (
