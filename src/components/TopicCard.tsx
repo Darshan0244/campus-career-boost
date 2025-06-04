@@ -14,6 +14,7 @@ interface TopicCardProps {
 
 const TopicCard = ({ title, description, topics, resources, color, icon }: TopicCardProps) => {
   const [showAllResources, setShowAllResources] = useState(false);
+  const [showAllTopics, setShowAllTopics] = useState(false);
   
   const colorClasses = {
     purple: 'border-neon-purple/30 hover:border-neon-purple/60 hover:shadow-neon-purple/20',
@@ -24,6 +25,7 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
   };
 
   const displayedResources = showAllResources ? resources : resources.slice(0, 3);
+  const displayedTopics = showAllTopics ? topics : topics.slice(0, 6);
 
   return (
     <div className={`glass rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${colorClasses[color as keyof typeof colorClasses]}`}>
@@ -42,7 +44,7 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
           Key Topics
         </h4>
         <div className="flex flex-wrap gap-2">
-          {topics.map((topic, index) => (
+          {displayedTopics.map((topic, index) => (
             <span
               key={index}
               className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 border border-white/20"
@@ -51,6 +53,15 @@ const TopicCard = ({ title, description, topics, resources, color, icon }: Topic
             </span>
           ))}
         </div>
+        {topics.length > 6 && (
+          <Button 
+            variant="outline" 
+            className="w-full mt-3 border-white/20 text-white hover:bg-white/10"
+            onClick={() => setShowAllTopics(!showAllTopics)}
+          >
+            {showAllTopics ? 'Show Less Topics' : `View All Topics (${topics.length})`}
+          </Button>
+        )}
       </div>
       
       <div className="space-y-3">
