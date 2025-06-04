@@ -203,13 +203,13 @@ const MainContent = () => {
       <section id="resume-templates" className="mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <FileText className="w-12 h-12 text-neon-blue mr-4" />
-              <h2 className="text-4xl md:text-5xl font-bold gradient-text">
+            <div className="flex flex-col sm:flex-row items-center justify-center mb-6">
+              <FileText className="w-8 h-8 sm:w-12 sm:h-12 text-neon-blue mb-2 sm:mb-0 sm:mr-4" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text text-center">
                 Resume Templates
               </h2>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto text-center">
               Professional resume templates to help you stand out in your job applications
             </p>
           </div>
