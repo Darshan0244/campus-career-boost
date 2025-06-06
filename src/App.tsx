@@ -7,11 +7,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Loader from "./components/Loader";
+import MaintenancePage from "./components/MaintenancePage";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMaintenanceMode, setIsMaintenanceMode] = useState(true); // Set to true to show maintenance page
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,6 +25,11 @@ const App = () => {
 
   if (isLoading) {
     return <Loader />;
+  }
+
+  // Show maintenance page when in maintenance mode
+  if (isMaintenanceMode) {
+    return <MaintenancePage />;
   }
 
   return (
