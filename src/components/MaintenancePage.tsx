@@ -29,7 +29,7 @@ const MaintenancePage = () => {
             <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-r from-neon-purple to-neon-blue rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto">
               <Wrench className="w-10 h-10 md:w-12 md:h-12 text-white animate-pulse" />
             </div>
-            <div className="absolute top-2 md:top-4 -right-1 md:-right-2 w-6 h-6 md:w-8 md:h-8 bg-neon-green rounded-full flex items-center justify-center animate-spin">
+            <div className="absolute top-6 md:top-8 -right-1 md:-right-2 w-6 h-6 md:w-8 md:h-8 bg-neon-green rounded-full flex items-center justify-center animate-spin">
               <RefreshCw className="w-3 h-3 md:w-4 md:h-4 text-white" />
             </div>
           </div>
