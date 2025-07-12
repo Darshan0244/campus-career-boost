@@ -18,20 +18,20 @@ const TopicCard = ({ title, description, topics, resources, color, icon, topicsL
   const [showAllTopics, setShowAllTopics] = useState(false);
   
   const colorClasses = {
-    purple: 'border-neon-purple/30 hover:border-neon-purple/60 hover:shadow-neon-purple/20',
-    blue: 'border-neon-blue/30 hover:border-neon-blue/60 hover:shadow-neon-blue/20',
-    green: 'border-neon-green/30 hover:border-neon-green/60 hover:shadow-neon-green/20',
-    orange: 'border-neon-orange/30 hover:border-neon-orange/60 hover:shadow-neon-orange/20',
-    pink: 'border-neon-pink/30 hover:border-neon-pink/60 hover:shadow-neon-pink/20',
+    purple: 'border-neon-purple/20',
+    blue: 'border-neon-blue/20',
+    green: 'border-neon-green/20',
+    orange: 'border-neon-orange/20',
+    pink: 'border-neon-pink/20',
   };
 
   const displayedResources = showAllResources ? resources : resources.slice(0, 3);
   const displayedTopics = showAllTopics ? topics : topics.slice(0, topicsLimit);
 
   return (
-    <div className={`glass rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${colorClasses[color as keyof typeof colorClasses]}`}>
+    <div className={`glass rounded-2xl p-8 border ${colorClasses[color as keyof typeof colorClasses]}`}>
       <div className="flex items-center space-x-3 mb-4">
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-r from-${color === 'purple' ? 'neon-purple' : color === 'blue' ? 'neon-blue' : color === 'green' ? 'neon-green' : color === 'orange' ? 'neon-orange' : 'neon-pink'}/20 to-${color === 'purple' ? 'neon-purple' : color === 'blue' ? 'neon-blue' : color === 'green' ? 'neon-green' : color === 'orange' ? 'neon-orange' : 'neon-pink'}/40 flex items-center justify-center`}>
+        <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
           {icon}
         </div>
         <h3 className="text-2xl font-bold text-white">{title}</h3>
@@ -76,7 +76,7 @@ const TopicCard = ({ title, description, topics, resources, color, icon, topicsL
             href={resource.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block p-3 glass-light rounded-lg hover:bg-white/20 transition-all duration-300 group"
+            className="block p-4 glass-light rounded-lg transition-colors duration-200 group"
           >
             <div className="flex items-center justify-between">
               <span className="text-gray-300 group-hover:text-white">{resource.name}</span>

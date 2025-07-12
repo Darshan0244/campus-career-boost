@@ -68,11 +68,11 @@ export default {
 					'light': 'rgba(255, 255, 255, 0.1)',
 				},
 				neon: {
-					'blue': '#00f5ff',
-					'purple': '#8b5cf6',
-					'pink': '#ec4899',
-					'green': '#10b981',
-					'orange': '#f97316',
+					'blue': 'hsl(var(--neon-blue))',
+					'purple': 'hsl(var(--neon-purple))',
+					'pink': 'hsl(var(--neon-pink))',
+					'green': 'hsl(var(--neon-green))',
+					'orange': 'hsl(var(--neon-orange))',
 				}
 			},
 			borderRadius: {
