@@ -78,12 +78,24 @@ const Hero = () => {
 
   return (
     <section ref={sectionRef} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 px-4">
-      {/* Minimalist Background Elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple/50 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-transparent via-neon-blue/50 to-transparent" />
-        <div className="absolute top-1/2 left-0 w-px h-full bg-gradient-to-b from-transparent via-neon-green/30 to-transparent" />
-        <div className="absolute top-1/2 right-0 w-px h-full bg-gradient-to-b from-transparent via-neon-purple/30 to-transparent" />
+      {/* Advanced Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-purple-900/20 to-slate-900/90" />
+        
+        {/* Geometric grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_40%,transparent_100%)]" />
+        
+        {/* Floating orbs with better positioning */}
+        <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-r from-neon-purple/10 to-neon-blue/10 rounded-full blur-3xl animate-pulse opacity-60" style={{ animationDelay: '0s', animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-neon-blue/10 to-neon-green/10 rounded-full blur-3xl animate-pulse opacity-60" style={{ animationDelay: '2s', animationDuration: '6s' }} />
+        <div className="absolute top-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-neon-green/10 to-neon-purple/10 rounded-full blur-3xl animate-pulse opacity-60" style={{ animationDelay: '4s', animationDuration: '5s' }} />
+        
+        {/* Accent lines */}
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-neon-purple/20 to-transparent opacity-40" />
+        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-neon-blue/20 to-transparent opacity-40" />
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent opacity-40" />
+        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple/20 to-transparent opacity-40" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
